@@ -1,5 +1,9 @@
 version: 1
 
+env:
+  - GOOS=linux
+  - GOARCH=amd64
+
 builds:
   - id: dummy-server
     binary: binary
@@ -10,7 +14,3 @@ builds:
       - amd64
     env:
       - CGO_ENABLED=0
-      - GOOS=linux
-      - GOARCH=amd64
-    flags:
-      - -trimpath
