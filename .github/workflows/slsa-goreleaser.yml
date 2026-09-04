@@ -12,8 +12,7 @@ permissions:
 
 jobs:
   build:
-    uses: slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0
+    uses: slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main
     with:
       go-version: 1.19
       config-file: .slsa-goreleaser.yml
-      envs: "GOOS=linux,GOARCH=amd64"
