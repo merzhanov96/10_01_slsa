@@ -4,7 +4,7 @@ builds:
   - id: dummy-server
     binary: binary
     main: ./cmd/main.go
-    goos:
-      - linux
-    goarch:
-      - amd64
+    env:
+      - GOOS=linux
+      - GOARCH=amd64
+      - CGO_ENABLED=0
