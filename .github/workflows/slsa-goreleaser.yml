@@ -6,8 +6,9 @@ on:
       - 'v*'
 
 permissions:
-  contents: read
-  id-token: write
+  contents: write      # для загрузки артефактов в релиз
+  actions: read        # для чтения метаданных workflow
+  id-token: write      # для OIDC-аутентификации
 
 jobs:
   build:
